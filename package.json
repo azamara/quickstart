@@ -11,7 +11,10 @@
     "test": "tsc && concurrently \"tsc -w\" \"karma start karma.conf.js\"",
     "test-once": "tsc && karma start karma.conf.js --single-run",
     "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "tsc:w": "tsc -w",
+    "build:aot": "ngc -p tsconfig-aot.json && rollup -c rollup-config.js",
+    "lite:aot": "lite-server -c aot/bs-config.json",
+    "source-map-explorer:aot": "source-map-explorer aot/dist/build.js"
   },
   "keywords": [],
   "author": "",
